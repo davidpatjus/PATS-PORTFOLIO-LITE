@@ -1,4 +1,4 @@
-import Logo from '/public/PATS.png'
+import Logo from '/PATS.png'
 import { FaWhatsapp , FaInstagram, FaLinkedin, FaGithub  } from "react-icons/fa";
 import { SiNextdotjs , SiTailwindcss, SiTypescript } from "react-icons/si";
 
@@ -8,7 +8,7 @@ const Hero = () => {
       <div className='max-w-7xl mx-auto'>
         <div className='flex flex-col md:flex-row items-center lg:h-[90vh] justify-between' >
             <div className='md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 px-6 lg:px-0 lg:mt-0 mt-10'>
-               <h1 className='lg:text-7xl text-4xl font-bold lg:leading-snug'>Hola, <br />Soy David <span className='text-red-500'>Patiño</span></h1>
+               <h1 className='lg:text-7xl text-4xl font-bold lg:leading-snug'>Hola, <br />Soy David <span className='text-red-500'>Patiño.</span></h1>
                <p className='md:text-2xl text-xl mb-4'>Desarrollador y Diseñador Web</p>
                <p className='mb-4'>Soy un desarrollador web apasionado con experiencia en React, Next.js y tecnologías web modernas. Me encanta crear sitios web hermosos y funcionales que resuelven problemas del mundo real.</p>
                <button className='bg-black text-white px-3 py-2 w-max rounded-md'><a href="#" download target='_blank'>Descargar CV</a></button>
@@ -21,7 +21,7 @@ const Hero = () => {
             </div>
         </div>
       </div>
-      <div className='absolute top-56 right-10 hidden bg-background border py-8 px-1 md:flex flex-col gap-8 rounded-full'> 
+      <div className='absolute top-56 right-10 hidden bg-background border py-8 px-1 lg:flex flex-col gap-8 rounded-full'> 
         <FaWhatsapp  className='w-24 h-14 text-red-600 hover:text-foreground'/>
         <FaInstagram className='w-24 h-14 text-red-600 hover:text-foreground'/>
         <FaGithub  className='w-24 h-14 text-red-600 hover:text-foreground'/>
