@@ -5,6 +5,10 @@ import {
   FaReact,
   FaAngular,
   FaNodeJs,
+  FaPython,
+  FaPhp,
+  FaGitAlt,
+  FaBootstrap,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -12,6 +16,10 @@ import {
   SiPostgresql,
   SiNestjs,
   SiNextdotjs,
+  SiCplusplus,
+  SiMysql, 
+  SiExpress,
+  SiAstro,
 } from "react-icons/si";
 
 const About = () => {
@@ -27,7 +35,8 @@ const About = () => {
               Hola, Soy David Patiño
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Desarrollador Full-Stack especializado en desarrollo web, con una pasión por crear aplicaciones intuitivas y escalables.
+              Desarrollador Full-Stack especializado en desarrollo web, con una
+              pasión por crear aplicaciones intuitivas y escalables.
             </p>
           </div>
           <div className="mt-10">
@@ -37,10 +46,10 @@ const About = () => {
                   Mi Historia
                 </h3>
                 <p className="mt-4 text-lg text-gray-600">
-									Soy un desarrollador web apasionado con experiencia en React,
-									Next.js y tecnologías web modernas. Me encanta crear sitios
-									web hermosos y funcionales que resuelven problemas del mundo
-									real.
+                  Soy un desarrollador web apasionado con experiencia en React,
+                  Next.js y tecnologías web modernas. Me encanta crear sitios
+                  web hermosos y funcionales que resuelven problemas del mundo
+                  real.
                 </p>
                 {/* <img src={MernStack} alt="" className='p-2 rounded-lg w-52 mt-4' /> */}
               </div>
@@ -62,36 +71,68 @@ const About = () => {
                     <span className="font-semibold">Javascript</span>
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaReact className="w-8 rounded-full h-8 text-cyan-400" />
-                    <span className="font-semibold">React</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <SiTypescript className="w-8 h-8 text-blue-500" />
                     <span className="font-semibold">TypeScript</span>
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiTailwindcss className="w-8 rounded-full h-8 text-cyan-500" />
-                    <span className="font-semibold">Tailwind Css</span>
+                    <FaReact className="w-8 rounded-full h-8 text-cyan-400" />
+                    <span className="font-semibold">React</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <SiNextdotjs className="w-9 h-8" />
+                    <span className="font-semibold">Next JS</span>
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <FaAngular className="w-10 h-8 text-red-600" />
                     <span className="font-semibold">Angular</span>
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <SiAstro className="w-10 h-8 text-orange-500" />
+                    <span className="font-semibold">Astro</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <SiTailwindcss className="w-8 rounded-full h-8 text-cyan-500" />
+                    <span className="font-semibold">Tailwind CSS</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <FaBootstrap  className="w-8 rounded-full h-8 text-purple-600" />
+                    <span className="font-semibold">Bootsrap</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <FaNodeJs className="w-10 h-8 text-green-500" />
-                    <span className="font-semibold">Node Js</span>
+                    <span className="font-semibold">Node JS</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <SiExpress className="w-10 h-8 " />
+                    <span className="font-semibold">Express</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <SiNestjs className="w-10 h-8 text-red-500" />
+                    <span className="font-semibold">Nest JS</span>
                   </div>
                   <div className="border border-red-300 flex items-center  w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <SiPostgresql className="w-10 h-8 text-cyan-700" />
                     <span className="font-semibold">PostgreSQL</span>
                   </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiNestjs className="w-10 h-8 text-red-500" />
-                    <span className="font-semibold">Nest Js</span>
+                  <div className="border border-red-300 flex items-center  w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <SiMysql className="w-10 h-8 text-cyan-900" />
+                    <span className="font-semibold">MySQL</span>
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiNextdotjs className="w-9 h-8" />
-                    <span className="font-semibold">Next Js</span>
+                    <FaPython className="w-9 h-8 text-yellow-400" />
+                    <span className="font-semibold">Python</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <SiCplusplus className="w-9 h-8 text-blue-800" />
+                    <span className="font-semibold">C++</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <FaPhp className="w-9 h-8 text-cyan-900" />
+                    <span className="font-semibold">php</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <FaGitAlt className="w-9 h-8 text-orange-500" />
+                    <span className="font-semibold">Git</span>
                   </div>
                 </div>
               </div>
@@ -102,9 +143,9 @@ const About = () => {
               Mis Intereses
             </h3>
             <p className="mt-4 text-lg text-gray-600">
-							Me encanta aprender nuevas tecnologías y compartir conocimientos
-							con la comunidad. Siempre estoy buscando oportunidades para
-							colaborar en proyectos interesantes y desafiantes.
+              Me encanta aprender nuevas tecnologías y compartir conocimientos
+              con la comunidad. Siempre estoy buscando oportunidades para
+              colaborar en proyectos interesantes y desafiantes.
             </p>
           </div>
         </div>
