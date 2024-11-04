@@ -46,10 +46,7 @@ const About = () => {
                   Mi Historia
                 </h3>
                 <p className="mt-4 text-lg text-gray-600">
-                  Soy un desarrollador web apasionado con experiencia en React,
-                  Next.js y tecnologías web modernas. Me encanta crear sitios
-                  web hermosos y funcionales que resuelven problemas del mundo
-                  real.
+                Soy un desarrollador Full-Stack junior dedicado, comprometido, autosuficiente, autoexigente y entusiasta de Pereira, Colombia. Actualmente estudio Ingeniería de Sistemas e Informática en la Universidad Tecnológica de Pereira, desde niño tengo una profunda pasión por crear soluciones digitales innovadoras que acorten la brecha entre la tecnología y la experiencia del usuario.
                 </p>
                 {/* <img src={MernStack} alt="" className='p-2 rounded-lg w-52 mt-4' /> */}
               </div>
@@ -143,9 +140,9 @@ const About = () => {
               Mis Intereses
             </h3>
             <p className="mt-4 text-lg text-gray-600">
-              Me encanta aprender nuevas tecnologías y compartir conocimientos
-              con la comunidad. Siempre estoy buscando oportunidades para
-              colaborar en proyectos interesantes y desafiantes.
+            Me apasiona la música, especialmente el hip hop y el rap colombiano, y sueño con aplicar mis habilidades para
+            impactar positivamente en la industria musical. Mi constante búsqueda por aprender y mejorar me motiva a
+            enfrentar y superar retos, asegurando que siempre aporto valor a cualquier equipo de desarrollo.
             </p>
           </div>
         </div>

@@ -11,13 +11,13 @@ const Contact = () => {
               <h2 className='text-3xl font-bold mb-3 text-red-500'>Ponte en Contacto</h2>
               <p className='mb-4 text-white/85'>Siempre estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en ponerte en contacto!</p>
               <div className='flex space-x-4'>
-                <a href="#" className='text-foreground/60 hover:text-foreground/80'>
+                <a href="https://api.whatsapp.com/send?phone=573146200770&text=%F0%9F%91%BE%20Hi%20David%2C%20how%20are%20you%3F%20I%20am%20interested%20in%20your%20services.%20%F0%9F%91%BE%20" className='text-foreground/60 hover:text-foreground/80'>
                 <FaWhatsapp className='h-8 w-8'/></a>
-                <a href="#" className='text-foreground/60 hover:text-foreground/80'>
+                <a href="https://www.instagram.com/david.juspian/" className='text-foreground/60 hover:text-foreground/80'>
                 <FaInstagram className='h-8 w-8'/></a>
-                <a href="#" className='text-foreground/60 hover:text-foreground/80'>
+                <a href="https://www.linkedin.com/in/david-esteban-patino-juspian-561861317/" className='text-foreground/60 hover:text-foreground/80'>
                 <FaLinkedin  className='h-8 w-8'/></a>
-                <a href="#" className='text-foreground/60 hover:text-foreground/80'>
+                <a href="https://github.com/davidpatjus" className='text-foreground/60 hover:text-foreground/80'>
                 <FaGithub  className='h-8 w-8'/></a>
               </div>
                 <Lottie animationData={contact} className='w-[350px] mx-auto lg:w-[500px] '/>
