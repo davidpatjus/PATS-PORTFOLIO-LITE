@@ -1,5 +1,5 @@
 import { FaWhatsapp , FaInstagram, FaLinkedin, FaGithub  } from "react-icons/fa";
-import contact from '../assets/Contact.json'
+import contact from '../Assets/Contact.json'
 import Lottie from 'lottie-react'
 
 const Contact = () => {
