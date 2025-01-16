@@ -4,12 +4,15 @@ import PatsSS from '/PatsSoftwareSolutions.png'
 import IAMarketing from '/MarketingIAGenerator.png'
 import RecipeFinder from '/IARecipeFinder.png'
 import ShoesFraksma from '/LandingShoesFraksma.png'
+import LandingPolosFraksma from '/LandingPolosFraksma.png'
 import RapCollection from '/RapCollection.jpg'
 import TierMaker from '/TierMaker.png'
 import GithubApi from '/github.jpg'
 import DigginTheMovies from '/DigginTheMovies.jpg'
 import NewsApp from '/NewsApp.jpg'
 import PatsOldPortfolio from '/OldPortfolio.png'
+import CruzDelSur from '/CruzDelSur.png'
+import AutorBlog from '/AutorBlog.png'
 
 const Projects = () => {
 
@@ -19,7 +22,8 @@ const Projects = () => {
           desc: 'un sitio web de comercio electrónico moderno y receptivo que vende productos de moda y belleza.',
           image: PlexoShop,
           live: "https://plexoshop.vercel.app/",
-          github: "https://github.com/LizethVictoria20/Final-Project---BootcampUTP"
+          github: "https://github.com/LizethVictoria20/Final-Project---BootcampUTP",
+          api: "https://github.com/davidpatjus/PLEXO-API"
         },
         {
           title: 'PAT´S SOFTWARE SOLUTIONS',
@@ -36,6 +40,19 @@ const Projects = () => {
           github: "https://github.com/davidpatjus/Marketing-IA-Generator"
         },
         {
+          title: 'Autor Blog Strapi',
+          desc: 'Plantilla moderna para un blog usando strapi como CMS para agregar contenido desde un dashboard.',
+          image: AutorBlog,
+          live: "https://autor-blog-template.vercel.app/",
+          github: "https://github.com/davidpatjus/Autor-Blog-Template"
+        },
+        {
+          title: 'Cruz Del Sur',
+          desc: 'Pagina Web de una empresa inmobiliaria desarrollada a partir de una plantilla y conectada con strapi.',
+          image: CruzDelSur,
+          live: "https://cdelsur.com/",
+        },
+        {
           title: 'IA Recipe Finder',
           desc: 'sitio web que permite encontrar recetas de cocina utilizando inteligencia artificial.',
           image: RecipeFinder,
@@ -43,11 +60,18 @@ const Projects = () => {
           github: "https://github.com/davidpatjus/IA-Recipe-Finder"
         },
         {
-          title: 'Landing Fraksma Sport',
+          title: 'Landing Calzado Fraksma Sport',
           desc: 'una landing page moderna y receptiva para una tienda de zapatos deportivos.',
           image: ShoesFraksma,
           live: "https://fraksmasport.co/landing-zapatos",
           github: "https://github.com/davidpatjus/Fraksma_Shoes_Landing"
+        },
+        {
+          title: 'Landing Polos Fraksma Sport',
+          desc: 'Una landing promocional para el black friday de una tienda de ropa deportiva.',
+          image: LandingPolosFraksma,
+          live: "https://fraksma-polos-landing.vercel.app/",
+          github: "https://github.com/davidpatjus/Fraksma_Polos_Landing"
         },
         {
           title: 'RAP Collection',

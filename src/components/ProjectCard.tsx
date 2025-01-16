@@ -5,7 +5,7 @@ interface Item {
   title: string;
   desc: string;
   live?: string;
-  github: string;
+  github?: string;
   api?: string;
 }
 
@@ -24,12 +24,14 @@ const Cards = ({ item }: { item: Item }) => {
               </a>
             </button>
           )}
-          <button className="bg-black text-white px-3 py-2 rounded-md">
-            <a href={item.github} target="_blank" className="flex gap-1">
-              <FaGithub className="w-5 h-5 mr-1" />
-              Github
-            </a>
-          </button>
+          {item.github && (
+            <button className="bg-black text-white px-3 py-2 rounded-md">
+              <a href={item.github} target="_blank" className="flex gap-1">
+                <FaGithub className="w-5 h-5 mr-1" />
+                Github
+              </a>
+            </button>
+          )}
           {item.api && (
             <button className="bg-black/80 text-white px-3 py-2 rounded-md">
               <a href={item.api} target="_blank" className="flex gap-1">
