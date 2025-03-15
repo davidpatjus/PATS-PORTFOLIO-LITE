@@ -13,6 +13,7 @@ import NewsApp from '/NewsApp.jpg'
 import PatsOldPortfolio from '/OldPortfolio.png'
 import CruzDelSur from '/CruzDelSur.png'
 import AutorBlog from '/AutorBlog.png'
+import LearningNuxt from '/Nuxt.png'
 
 const Projects = () => {
 
@@ -63,7 +64,7 @@ const Projects = () => {
           title: 'Landing Calzado Fraksma Sport',
           desc: 'una landing page moderna y receptiva para una tienda de zapatos deportivos.',
           image: ShoesFraksma,
-          live: "https://fraksmasport.co/landing-zapatos",
+          live: "https://fraksma-shoes-landing.vercel.app/",
           github: "https://github.com/davidpatjus/Fraksma_Shoes_Landing"
         },
         {
@@ -79,6 +80,13 @@ const Projects = () => {
           image: RapCollection,
           live: "https://pats-rap-collection.vercel.app/",
           github: "https://github.com/davidpatjus/PATS-RAP-COLLECTION"
+        },
+        {
+          title: 'Introducing Nuxt',
+          desc: 'aplicación web hecha en nuxt con vuetify que incluye un CRUD de productos, auth, lyfecicle y demas caracteristicas del framework.',
+          image: LearningNuxt,
+          live: "https://nuxt-learning-proyect.vercel.app/",
+          github: "https://github.com/davidpatjus/NUXT-LEARNING-PROYECT"
         },
         {
           title: 'Diggin The Movies',

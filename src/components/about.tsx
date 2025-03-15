@@ -9,6 +9,7 @@ import {
   FaPhp,
   FaGitAlt,
   FaBootstrap,
+  FaVuejs,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -20,6 +21,8 @@ import {
   SiMysql, 
   SiExpress,
   SiAstro,
+  SiVuetify,
+  SiNuxtdotjs,
 } from "react-icons/si";
 
 const About = () => {
@@ -76,8 +79,16 @@ const About = () => {
                     <span className="font-semibold">React</span>
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <FaVuejs className="w-8 rounded-full h-8 text-green-500" />
+                    <span className="font-semibold">Vue</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <SiNextdotjs className="w-9 h-8" />
                     <span className="font-semibold">Next JS</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <SiNuxtdotjs className="w-9 h-8 text-green-400" />
+                    <span className="font-semibold">Nuxt</span>
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <FaAngular className="w-10 h-8 text-red-600" />
@@ -90,6 +101,10 @@ const About = () => {
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <SiTailwindcss className="w-8 rounded-full h-8 text-cyan-500" />
                     <span className="font-semibold">Tailwind CSS</span>
+                  </div>
+                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                    <SiVuetify className="w-8 rounded-full h-8   text-blue-500" />
+                    <span className="font-semibold">Vuetify 3</span>
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <FaBootstrap  className="w-8 rounded-full h-8 text-purple-600" />
