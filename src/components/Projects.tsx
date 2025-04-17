@@ -14,6 +14,7 @@ import PatsOldPortfolio from '/OldPortfolio.png'
 import CruzDelSur from '/CruzDelSur.png'
 import AutorBlog from '/AutorBlog.png'
 import LearningNuxt from '/Nuxt.png'
+import InteriorIADesigner from '/InteriorIADesign.png'
 
 const Projects = () => {
 
@@ -39,6 +40,13 @@ const Projects = () => {
           image: IAMarketing,
           live: "https://pats-marketing-ia-generator.vercel.app/",
           github: "https://github.com/davidpatjus/Marketing-IA-Generator"
+        },
+        {
+          title: 'Interior IA Designer',
+          desc: 'una aplicación web que permite a los usuarios crear y diseños de interiores utilizando inteligencia artificial.',
+          image: InteriorIADesigner,
+          live: "https://interior-designer-ia.vercel.app/",
+          github: "https://github.com/davidpatjus/INTERIOR-DESIGNER-IA"
         },
         {
           title: 'Autor Blog Strapi',
