@@ -15,6 +15,7 @@ import CruzDelSur from '/CruzDelSur.png'
 import AutorBlog from '/AutorBlog.png'
 import LearningNuxt from '/Nuxt.png'
 import InteriorIADesigner from '/InteriorIADesign.png'
+import PatsInfographic from '/PatsInfographic.png'
 
 const Projects = () => {
 
@@ -40,6 +41,13 @@ const Projects = () => {
           image: IAMarketing,
           live: "https://pats-marketing-ia-generator.vercel.app/",
           github: "https://github.com/davidpatjus/Marketing-IA-Generator"
+        },
+        {
+          title: 'Pats Infographic',
+          desc: 'Mi infografía personal profesional con objetivos profesionales y personales.',
+          image: PatsInfographic,
+          live: "https://pats-infographic.vercel.app/",
+          github: "https://github.com/davidpatjus/PATS-INFOGRAPHIC"
         },
         {
           title: 'Interior IA Designer',
