@@ -16,6 +16,7 @@ import AutorBlog from '/AutorBlog.png'
 import LearningNuxt from '/Nuxt.png'
 import InteriorIADesigner from '/InteriorIADesign.png'
 import PatsInfographic from '/PatsInfographic.png'
+import ArkanoidGame from '/arkanoidGameJS.png'
 
 const Projects = () => {
 
@@ -43,13 +44,6 @@ const Projects = () => {
           github: "https://github.com/davidpatjus/Marketing-IA-Generator"
         },
         {
-          title: 'Pats Infographic',
-          desc: 'Mi infografía personal profesional con objetivos profesionales y personales.',
-          image: PatsInfographic,
-          live: "https://pats-infographic.vercel.app/",
-          github: "https://github.com/davidpatjus/PATS-INFOGRAPHIC"
-        },
-        {
           title: 'Interior IA Designer',
           desc: 'una aplicación web que permite a los usuarios crear y diseños de interiores utilizando inteligencia artificial.',
           image: InteriorIADesigner,
@@ -62,6 +56,20 @@ const Projects = () => {
           image: AutorBlog,
           live: "https://autor-blog-template.vercel.app/",
           github: "https://github.com/davidpatjus/Autor-Blog-Template"
+        },
+        {
+          title: 'Arkanoid Retro',
+          desc: 'Un juego clásico de romper ladrillos con una bola y una paleta.',
+          image: ArkanoidGame,
+          live: "https://arkanoidgamejs.netlify.app/",
+          github: "https://github.com/davidpatjus/ArkanoidGameJS"
+        },
+        {
+          title: 'Pats Infographic',
+          desc: 'Mi infografía personal profesional con objetivos profesionales y personales.',
+          image: PatsInfographic,
+          live: "https://pats-infographic.vercel.app/",
+          github: "https://github.com/davidpatjus/PATS-INFOGRAPHIC"
         },
         {
           title: 'Cruz Del Sur',
@@ -147,8 +155,8 @@ const Projects = () => {
       <div className='mb-16 max-w-7xl mx-auto'>
         <h2 className='text-3xl font-bold mb-8 text-white border-b border-red-500 w-max pb-4'>Mis Proyectos</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-10'>
-            {projectJson.map((items)=> {
-                return <ProjectCard item={items}/>
+            {projectJson.map((items, key) => {
+                return <ProjectCard key={key} item={items}/>
             })}
         </div>
       </div>
