@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa";
+import { useLanguage } from "../i18n/context";
 
 interface Item {
   image: string;
@@ -10,11 +11,13 @@ interface Item {
 }
 
 const Cards = ({ item }: { item: Item }) => {
+  const { t } = useLanguage();
+
   return (
     <div className="border border-red-500 rounded-lg w-full max-w-[400px] bg-red-50">
       <img
         src={item.image}
-        alt={`Captura del proyecto ${item.title}`}
+        alt={`${t.projects.screenshotAlt} ${item.title}`}
         loading="lazy"
         decoding="async"
         width={800}

@@ -1,4 +1,6 @@
 import ProjectCard from '../components/ProjectCard'
+import { useLanguage } from '../i18n/context'
+import { ProjectId } from '../i18n/translations'
 import PlexoShop from '/PlexoShop.webp'
 import PatsSS from '/PatsSoftwareSolutions.webp'
 import IAMarketing from '/MarketingIAGenerator.webp'
@@ -18,133 +20,124 @@ import InteriorIADesigner from '/InteriorIADesign.webp'
 import PatsInfographic from '/PatsInfographic.webp'
 import ArkanoidGame from '/arkanoidGameJS.webp'
 
-const Projects = () => {
+interface Project {
+  id: ProjectId;
+  image: string;
+  live?: string;
+  github?: string;
+  api?: string;
+}
 
-    const projectJson = [
+const Projects = () => {
+    const { t } = useLanguage()
+
+    const projectJson: Project[] = [
         {
-          title: 'Plexo Shop',
-          desc: 'un sitio web de comercio electrónico moderno y receptivo que vende productos de moda y belleza.',
+          id: 'plexoShop',
           image: PlexoShop,
           live: "https://plexoshop.vercel.app/",
           github: "https://github.com/LizethVictoria20/Final-Project---BootcampUTP",
           api: "https://github.com/davidpatjus/PLEXO-API"
         },
         {
-          title: 'PAT´S SOFTWARE SOLUTIONS',
-          desc: 'un sitio web moderno y receptivo que ofrece servicios de desarrollo web y móvil.',
+          id: 'patsSoftwareSolutions',
           image: PatsSS,
           live: "https://pats-software-solutions.vercel.app/",
           github: "https://github.com/davidpatjus/PATS-SOFTWARE-SOLUTIONS"
         },
         {
-          title: 'Marketing IA Generator',
-          desc: 'un SaaS que genera contenido de marketing utilizando inteligencia artificial.',
+          id: 'marketingIA',
           image: IAMarketing,
           live: "https://pats-marketing-ia-generator.vercel.app/",
           github: "https://github.com/davidpatjus/Marketing-IA-Generator"
         },
         {
-          title: 'Interior IA Designer',
-          desc: 'una aplicación web que permite a los usuarios crear y diseños de interiores utilizando inteligencia artificial.',
+          id: 'interiorIA',
           image: InteriorIADesigner,
           live: "https://interior-designer-ia.vercel.app/",
           github: "https://github.com/davidpatjus/INTERIOR-DESIGNER-IA"
         },
         {
-          title: 'Autor Blog Strapi',
-          desc: 'Plantilla moderna para un blog usando strapi como CMS para agregar contenido desde un dashboard.',
+          id: 'autorBlog',
           image: AutorBlog,
           live: "https://autor-blog-template.vercel.app/",
           github: "https://github.com/davidpatjus/Autor-Blog-Template"
         },
         {
-          title: 'Arkanoid Retro',
-          desc: 'Un juego clásico de romper ladrillos con una bola y una paleta.',
+          id: 'arkanoid',
           image: ArkanoidGame,
           live: "https://arkanoidgamejs.netlify.app/",
           github: "https://github.com/davidpatjus/ArkanoidGameJS"
         },
         {
-          title: 'Pats Infographic',
-          desc: 'Mi infografía personal profesional con objetivos profesionales y personales.',
+          id: 'patsInfographic',
           image: PatsInfographic,
           live: "https://pats-infographic.vercel.app/",
           github: "https://github.com/davidpatjus/PATS-INFOGRAPHIC"
         },
         {
-          title: 'Cruz Del Sur',
-          desc: 'Pagina Web de una empresa inmobiliaria desarrollada a partir de una plantilla y conectada con strapi.',
+          id: 'cruzDelSur',
           image: CruzDelSur,
           live: "https://cdelsur.com/",
         },
         {
-          title: 'IA Recipe Finder',
-          desc: 'sitio web que permite encontrar recetas de cocina utilizando inteligencia artificial.',
+          id: 'recipeFinder',
           image: RecipeFinder,
           live: "https://ia-recipe-finder.vercel.app/",
           github: "https://github.com/davidpatjus/IA-Recipe-Finder"
         },
         {
-          title: 'Landing Calzado Fraksma Sport',
-          desc: 'una landing page moderna y receptiva para una tienda de zapatos deportivos.',
+          id: 'shoesFraksma',
           image: ShoesFraksma,
           live: "https://fraksma-shoes-landing.vercel.app/",
           github: "https://github.com/davidpatjus/Fraksma_Shoes_Landing"
         },
         {
-          title: 'Landing Polos Fraksma Sport',
-          desc: 'Una landing promocional para el black friday de una tienda de ropa deportiva.',
+          id: 'polosFraksma',
           image: LandingPolosFraksma,
           live: "https://fraksma-polos-landing.vercel.app/",
           github: "https://github.com/davidpatjus/Fraksma_Polos_Landing"
         },
         {
-          title: 'RAP Collection',
-          desc: 'Pagina Web con biblioteca de albums de rap colombiano.',
+          id: 'rapCollection',
           image: RapCollection,
           live: "https://pats-rap-collection.vercel.app/",
           github: "https://github.com/davidpatjus/PATS-RAP-COLLECTION"
         },
         {
-          title: 'Introducing Nuxt',
-          desc: 'aplicación web hecha en nuxt con vuetify que incluye un CRUD de productos, auth, lyfecicle y demas caracteristicas del framework.',
+          id: 'nuxt',
           image: LearningNuxt,
           live: "https://nuxt-learning-proyect.vercel.app/",
           github: "https://github.com/davidpatjus/NUXT-LEARNING-PROYECT"
         },
         {
-          title: 'Diggin The Movies',
-          desc: 'una aplicación web que permite a los usuarios buscar y ver información sobre películas, personas y series de televisión.',
+          id: 'digginTheMovies',
           image: DigginTheMovies,
           live: "https://patsdigginthemovies.netlify.app/",
           github: "https://github.com/davidpatjus/DigginTheMovies",
           api: "https://github.com/davidpatjus/TMDB-API"
         },
         {
-          title: 'News App',
-          desc: 'una aplicación web que permite a los usuarios buscar y ver noticias de todo el mundo.',
+          id: 'newsApp',
           image: NewsApp,
           live: "https://patsnewsapp.netlify.app/",
           github: "https://github.com/davidpatjus/News-App",
           api: "https://github.com/davidpatjus/NEWS-API"
         },
         {
-          title: 'Pats English old Portfolio',
-          desc: 'mi antiguo portafolio personal en ingles.',
+          id: 'oldPortfolio',
           image: PatsOldPortfolio,
           live: "https://pat-s-life-portfolio.vercel.app/",
           github: "https://github.com/davidpatjus/PAT-S-LIFE-PORTFOLIO"
         },
         {
-          title: 'Tier Maker',
-          desc: 'una aplicación web que permite a los usuarios crear y compartir sus propias listas de clasificación.',
+          id: 'tierMaker',
           image: TierMaker,
           live: "https://patstiermaker.netlify.app/",
           github: "https://github.com/davidpatjus/PATS-TIER-MAKER"
         },
         {
-          title: 'Github API',
-          desc: 'una API que permite a los usuarios buscar y ver información de los repositorios de Github.',
+          id: 'githubApi',
           image: GithubApi,
           github: "https://github.com/davidpatjus/GITHUB-API"
         },
@@ -153,10 +146,10 @@ const Projects = () => {
   return (
     <section id='projects' className='relative bg-gray-700 py-10 px-4'>
       <div className='mb-16 max-w-7xl mx-auto'>
-        <h2 className='text-3xl font-bold mb-8 text-white border-b border-red-500 w-max pb-4'>Mis Proyectos</h2>
+        <h2 className='text-3xl font-bold mb-8 text-white border-b border-red-500 w-max pb-4'>{t.projects.title}</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-10'>
-            {projectJson.map((items, key) => {
-                return <ProjectCard key={key} item={items}/>
+            {projectJson.map((project) => {
+                return <ProjectCard key={project.id} item={{ ...project, ...t.projects.items[project.id] }}/>
             })}
         </div>
       </div>
