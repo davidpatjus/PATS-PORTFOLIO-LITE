@@ -108,7 +108,7 @@ const About = () => {
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <FaBootstrap  className="w-8 rounded-full h-8 text-purple-600" />
-                    <span className="font-semibold">Bootsrap</span>
+                    <span className="font-semibold">Bootstrap</span>
                   </div>
                   <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
                     <FaNodeJs className="w-10 h-8 text-green-500" />
