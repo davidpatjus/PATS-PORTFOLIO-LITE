@@ -1,168 +1,159 @@
+import { IconType } from "react-icons";
+import { FaGraduationCap } from "react-icons/fa";
 import {
-  FaHtml5,
-  FaCss3,
-  FaJsSquare,
-  FaReact,
-  FaAngular,
-  FaNodeJs,
-  FaPython,
-  FaPhp,
-  FaGitAlt,
-  FaBootstrap,
-  FaVuejs,
-} from "react-icons/fa";
-import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
   SiTypescript,
-  SiTailwindcss,
-  SiPostgresql,
-  SiNestjs,
+  SiReact,
   SiNextdotjs,
-  SiCplusplus,
-  SiMysql, 
-  SiExpress,
-  SiAstro,
-  SiVuetify,
+  SiVuedotjs,
   SiNuxtdotjs,
+  SiAngular,
+  SiAstro,
+  SiTailwindcss,
+  SiBootstrap,
+  SiVuetify,
+  SiNodedotjs,
+  SiExpress,
+  SiNestjs,
+  SiDjango,
+  SiGraphql,
+  SiJsonwebtokens,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiSupabase,
+  SiFirebase,
+  SiDrizzle,
+  SiSequelize,
+  SiPython,
+  SiCplusplus,
+  SiPhp,
+  SiGit,
+  SiDocker,
+  SiPostman,
+  SiFigma,
 } from "react-icons/si";
 import { useLanguage } from "../i18n/context";
+import { SkillGroupId } from "../i18n/translations";
+import SectionHeading from "./SectionHeading";
+
+interface Skill {
+  name: string;
+  icon: IconType;
+  color: string;
+}
+
+const SKILLS: Record<SkillGroupId, Skill[]> = {
+  frontend: [
+    { name: "HTML", icon: SiHtml5, color: "text-orange-600" },
+    { name: "CSS", icon: SiCss3, color: "text-blue-600" },
+    { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+    { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
+    { name: "React", icon: SiReact, color: "text-cyan-400" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-black" },
+    { name: "Vue", icon: SiVuedotjs, color: "text-green-500" },
+    { name: "Nuxt", icon: SiNuxtdotjs, color: "text-green-400" },
+    { name: "Angular", icon: SiAngular, color: "text-red-600" },
+    { name: "Astro", icon: SiAstro, color: "text-orange-500" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
+    { name: "Bootstrap", icon: SiBootstrap, color: "text-purple-600" },
+    { name: "Vuetify", icon: SiVuetify, color: "text-blue-500" },
+  ],
+  backend: [
+    { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
+    { name: "Express", icon: SiExpress, color: "text-black" },
+    { name: "NestJS", icon: SiNestjs, color: "text-red-500" },
+    { name: "Django", icon: SiDjango, color: "text-green-800" },
+    { name: "GraphQL", icon: SiGraphql, color: "text-pink-600" },
+    { name: "JWT", icon: SiJsonwebtokens, color: "text-purple-700" },
+  ],
+  databases: [
+    { name: "PostgreSQL", icon: SiPostgresql, color: "text-sky-700" },
+    { name: "MySQL", icon: SiMysql, color: "text-cyan-900" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
+    { name: "Supabase", icon: SiSupabase, color: "text-emerald-500" },
+    { name: "Firebase", icon: SiFirebase, color: "text-amber-500" },
+    { name: "Drizzle ORM", icon: SiDrizzle, color: "text-lime-600" },
+    { name: "Sequelize", icon: SiSequelize, color: "text-blue-600" },
+  ],
+  tools: [
+    { name: "Python", icon: SiPython, color: "text-blue-600" },
+    { name: "C++", icon: SiCplusplus, color: "text-blue-800" },
+    { name: "PHP", icon: SiPhp, color: "text-indigo-700" },
+    { name: "Git", icon: SiGit, color: "text-orange-500" },
+    { name: "Docker", icon: SiDocker, color: "text-sky-500" },
+    { name: "Postman", icon: SiPostman, color: "text-orange-500" },
+    { name: "Figma", icon: SiFigma, color: "text-pink-500" },
+  ],
+};
 
 const About = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="relative" id="about">
-      <div className="bg-gray-100 py-12">
+    <section className="relative" id="about">
+      <div className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">
-              {t.about.label}
-            </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              {t.about.title}
-            </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              {t.about.subtitle}
-            </p>
-          </div>
-          <div className="mt-10">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <SectionHeading label={t.about.label} title={t.about.title} subtitle={t.about.subtitle} />
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+            <div className="space-y-10">
               <div>
-                <h3 className="text-2xl font-semibold text-gray-900">
-                  {t.about.storyTitle}
-                </h3>
-                <p className="mt-4 text-lg text-gray-600">
-                  {t.about.story}
-                </p>
-                {/* <img src={MernStack} alt="" className='p-2 rounded-lg w-52 mt-4' /> */}
-              </div>
-              <div className="border-2 border-red-200 rounded-lg md:p-7 py-7  flex flex-col gap-8 items-center shadow-lg shadow-red-300">
-                <h3 className="text-2xl font-semibold text-red-600">
-                  {t.about.skillsTitle}
-                </h3>
-                <div className="flex items-center justify-center flex-wrap gap-3">
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaHtml5 className="w-10 h-8 text-orange-600" />
-                    <span className="font-semibold">HTML</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaCss3 className="w-8 h-8 text-cyan-500" />
-                    <span className="font-semibold">CSS</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaJsSquare className="w-10 h-8 text-yellow-400" />
-                    <span className="font-semibold">Javascript</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiTypescript className="w-8 h-8 text-blue-500" />
-                    <span className="font-semibold">TypeScript</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaReact className="w-8 rounded-full h-8 text-cyan-400" />
-                    <span className="font-semibold">React</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaVuejs className="w-8 rounded-full h-8 text-green-500" />
-                    <span className="font-semibold">Vue</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiNextdotjs className="w-9 h-8" />
-                    <span className="font-semibold">Next JS</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiNuxtdotjs className="w-9 h-8 text-green-400" />
-                    <span className="font-semibold">Nuxt</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaAngular className="w-10 h-8 text-red-600" />
-                    <span className="font-semibold">Angular</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiAstro className="w-10 h-8 text-orange-500" />
-                    <span className="font-semibold">Astro</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiTailwindcss className="w-8 rounded-full h-8 text-cyan-500" />
-                    <span className="font-semibold">Tailwind CSS</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiVuetify className="w-8 rounded-full h-8   text-blue-500" />
-                    <span className="font-semibold">Vuetify 3</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaBootstrap  className="w-8 rounded-full h-8 text-purple-600" />
-                    <span className="font-semibold">Bootstrap</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaNodeJs className="w-10 h-8 text-green-500" />
-                    <span className="font-semibold">Node JS</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiExpress className="w-10 h-8 " />
-                    <span className="font-semibold">Express</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiNestjs className="w-10 h-8 text-red-500" />
-                    <span className="font-semibold">Nest JS</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center  w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiPostgresql className="w-10 h-8 text-cyan-700" />
-                    <span className="font-semibold">PostgreSQL</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center  w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiMysql className="w-10 h-8 text-cyan-900" />
-                    <span className="font-semibold">MySQL</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaPython className="w-9 h-8 text-yellow-400" />
-                    <span className="font-semibold">Python</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <SiCplusplus className="w-9 h-8 text-blue-800" />
-                    <span className="font-semibold">C++</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaPhp className="w-9 h-8 text-cyan-900" />
-                    <span className="font-semibold">php</span>
-                  </div>
-                  <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                    <FaGitAlt className="w-9 h-8 text-orange-500" />
-                    <span className="font-semibold">Git</span>
-                  </div>
+                <h3 className="text-2xl font-semibold text-gray-900">{t.about.profileTitle}</h3>
+                <div className="mt-4 space-y-4 text-lg text-gray-600">
+                  {t.about.profile.map((paragraph) => (
+                    <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+                  ))}
                 </div>
               </div>
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900">{t.about.educationTitle}</h3>
+                <ul className="mt-4 space-y-4">
+                  {t.about.education.map((item) => (
+                    <li key={item.title} className="flex gap-4 rounded-lg border border-red-200 bg-white p-4">
+                      <FaGraduationCap className="mt-1 h-6 w-6 shrink-0 text-red-500" aria-hidden="true" />
+                      <div>
+                        <p className="font-semibold text-gray-900">{item.title}</p>
+                        <p className="text-sm text-gray-500">
+                          {item.place} · {item.period}
+                        </p>
+                        <p className="mt-1 text-gray-600">{item.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="border-2 border-red-200 rounded-lg p-5 md:p-7 flex flex-col gap-6 shadow-lg shadow-red-300 bg-white h-max">
+              <h3 className="text-2xl font-semibold text-red-600 text-center">{t.about.skillsTitle}</h3>
+              {(Object.keys(SKILLS) as SkillGroupId[]).map((group) => (
+                <div key={group}>
+                  <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-500">
+                    {t.about.skillGroups[group]}
+                  </h4>
+                  <ul className="flex flex-wrap gap-2">
+                    {SKILLS[group].map(({ name, icon: Icon, color }) => (
+                      <li
+                        key={name}
+                        className="border border-red-300 flex items-center gap-2 px-2 py-1 rounded-lg shadow-sm shadow-red-200"
+                      >
+                        <Icon className={`w-6 h-6 ${color}`} aria-hidden="true" />
+                        <span className="font-semibold text-sm">{name}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
           <div className="mt-12">
-            <h3 className="text-2xl font-semibold text-gray-900">
-              {t.about.interestsTitle}
-            </h3>
-            <p className="mt-4 text-lg text-gray-600">
-              {t.about.interests}
-            </p>
+            <h3 className="text-2xl font-semibold text-gray-900">{t.about.interestsTitle}</h3>
+            <p className="mt-4 text-lg text-gray-600">{t.about.interests}</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
