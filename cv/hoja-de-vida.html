@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Hoja de vida · David Esteban Patiño Juspian · Desarrollador Full-Stack</title>
+<meta name="author" content="David Esteban Patiño Juspian">
+<meta name="description" content="Desarrollador Full-Stack · TypeScript, Next.js, React, NestJS, Node.js, IA, automatización y DevOps. Portafolio: pats-portfolio-lite.vercel.app">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #111;
+    --muted: #555;
+    --soft: #8a8a8a;
+    --accent: #e11d2a;
+    --accent-soft: #fdecee;
+    --rule: #e5e5e5;
+  }
+  @page { size: A4; margin: 14mm 15mm 16mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 9.4pt;
+    line-height: 1.45;
+    color: var(--ink);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+  strong, b { font-weight: 600; }
+
+  /* ---------- Encabezado ---------- */
+  header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid var(--ink);
+  }
+  h1 {
+    margin: 0;
+    font-size: 23pt;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 1.1;
+  }
+  .role {
+    margin: 6px 0 8px;
+    font-size: 12pt;
+    font-weight: 500;
+  }
+  .role span { color: var(--accent); }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 14px;
+    font-size: 8.6pt;
+    color: var(--muted);
+  }
+  .contact a:hover { color: var(--accent); }
+  .photo {
+    width: 92px;
+    height: 92px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  /* ---------- Banda del portafolio ---------- */
+  .portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin: 12px 0 4px;
+    padding: 9px 14px;
+    background: var(--ink);
+    color: #fff;
+    border-left: 6px solid var(--accent);
+  }
+  .portfolio .label {
+    font-size: 7.6pt;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #ff8a92;
+  }
+  .portfolio .url {
+    display: block;
+    font-size: 13pt;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+  .portfolio .what {
+    font-size: 8.3pt;
+    line-height: 1.35;
+    text-align: right;
+    color: #ddd;
+    max-width: 52%;
+  }
+
+  /* ---------- Cifras ---------- */
+  .stats {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .stats li {
+    flex: 1;
+    padding: 4px 0 4px 10px;
+    border-left: 3px solid var(--accent);
+    font-size: 8.3pt;
+    color: var(--muted);
+    line-height: 1.25;
+  }
+  .stats b {
+    display: block;
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ---------- Secciones ---------- */
+  section { margin-top: 14px; }
+  h2 {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 2px 9px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 11.5pt;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+  p { margin: 0; }
+
+  .entry { margin-bottom: 11px; break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  h3 {
+    margin: 0;
+    font-size: 10pt;
+    font-weight: 600;
+  }
+  .when {
+    flex-shrink: 0;
+    font-size: 8.8pt;
+    font-weight: 500;
+  }
+  .where { color: var(--soft); font-size: 9pt; }
+  .where a { color: var(--accent); font-weight: 500; }
+  ul.bullets { margin: 4px 0 0; padding-left: 16px; }
+  ul.bullets li { margin: 2px 0; }
+  ul.bullets li::marker { color: var(--accent); }
+  .stack {
+    margin-top: 5px;
+    font-size: 8.4pt;
+    color: var(--muted);
+  }
+  .stack b { color: var(--ink); font-weight: 500; }
+
+  /* Proyectos */
+  .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 18px; }
+  .project { break-inside: avoid; }
+  .project h3 { font-size: 9.6pt; }
+  .project h3 a { color: var(--accent); font-weight: 500; font-size: 8.2pt; margin-left: 4px; }
+  .project p { font-size: 8.8pt; }
+  .more {
+    margin-top: 9px;
+    padding: 6px 10px;
+    background: var(--accent-soft);
+    font-size: 8.8pt;
+  }
+  .more a { color: var(--accent); font-weight: 600; }
+
+  /* Habilidades */
+  dl.skills { margin: 0; display: grid; grid-template-columns: 128px 1fr; gap: 3px 10px; }
+  dl.skills dt { font-weight: 600; }
+  dl.skills dd { margin: 0; }
+
+  .inline-list { display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 0; margin: 0; list-style: none; }
+  .inline-list li::before { content: "■"; margin-right: 6px; font-size: 8pt; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+
+  .lang { display: grid; grid-template-columns: 1fr; gap: 6px; }
+  .lang .bar { height: 4px; margin-top: 3px; background: var(--rule); }
+  .lang .bar span { display: block; height: 100%; background: var(--ink); }
+
+
+  .page-break { break-before: page; margin-top: 0; }
+
+  @media screen {
+    body { background: #eee; }
+    main { width: 210mm; margin: 24px auto; padding: 14mm 15mm 18mm; background: #fff; box-shadow: 0 2px 18px rgba(0,0,0,.12); }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div>
+    <h1>DAVID ESTEBAN PATIÑO JUSPIAN</h1>
+    <p class="role">Desarrollador Full-Stack <span>·</span> IA, Automatización y DevOps</p>
+    <div class="contact">
+      <span>Pereira, Colombia</span>
+      <a href="https://wa.me/573146200770">+57 314 620 0770</a>
+      <a href="mailto:davideste200309@gmail.com">davideste200309@gmail.com</a>
+      <a href="https://www.linkedin.com/in/david-esteban-patino-juspian-561861317/">linkedin.com/in/david-esteban-patino-juspian</a>
+      <a href="https://github.com/davidpatjus">github.com/davidpatjus</a>
+    </div>
+  </div>
+  <img class="photo" src="foto.jpg" alt="Foto de David Esteban Patiño Juspian">
+</header>
+
+<a class="portfolio" href="https://pats-portfolio-lite.vercel.app">
+  <div>
+    <span class="label">Portafolio profesional</span>
+    <span class="url">pats-portfolio-lite.vercel.app</span>
+  </div>
+  <div class="what">+15 proyectos desplegados con demo en vivo y código fuente: SaaS con IA, CRM, e-commerce y APIs REST.</div>
+</a>
+
+<ul class="stats">
+  <li><b>+3 años</b>construyendo productos web</li>
+  <li><b>+15</b>proyectos desplegados en producción</li>
+  <li><b>1 app</b>publicada en Google Play</li>
+</ul>
+
+<section>
+  <h2>Perfil</h2>
+  <p>
+    Desarrollador Full-Stack y estudiante de Ingeniería de Sistemas y Computación (UTP) que construye productos web
+    completos: interfaz, API REST, base de datos y despliegue. Trabajo principalmente con <strong>TypeScript, Next.js,
+    React, NestJS y Node.js</strong>; integro <strong>modelos de lenguaje (LLMs), agentes de IA y automatizaciones con
+    n8n</strong> en flujos reales de negocio, y llevo las aplicaciones a producción con <strong>Docker, Nginx y SSL</strong>
+    en VPS, nube y tiendas de aplicaciones. Desarrollé <strong>PaleroSoft</strong>, un CRM publicado en Google Play. Mi
+    formación en marketing digital me permite tomar decisiones técnicas orientadas a la conversión, la experiencia de
+    usuario y los objetivos del cliente.
+  </p>
+</section>
+
+<section>
+  <h2>Experiencia</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Desarrollador Full-Stack · Mente Nueva Marketing</h3>
+      <span class="when">May 2025 – Feb 2026</span>
+    </div>
+    <div class="where">Agencia de marketing digital ·
+      <a href="https://play.google.com/store/apps/details?id=com.palerosoft.app&amp;hl=es_CO">Ver en Google Play</a> ·
+      <a href="https://palero-soft-app.vercel.app/">Ver demo</a></div>
+    <ul class="bullets">
+      <li>Desarrollé de extremo a extremo <strong>PaleroSoft</strong>, plataforma CRM y de gestión de proyectos para agencias y equipos remotos, con <strong>Next.js</strong> en el frontend y una API modular en <strong>NestJS</strong>.</li>
+      <li>Implementé <strong>10 módulos</strong> independientes: autenticación, usuarios, clientes, proyectos, tareas, comentarios, chat, facturación, reuniones y almacenamiento.</li>
+      <li>Integré videollamadas con <strong>Daily.co</strong> para reuniones y <strong>Supabase Storage</strong> para la gestión de archivos.</li>
+      <li>Empaqueté la aplicación como <strong>PWA</strong> instalable y la <strong>publiqué en Google Play Store</strong> bajo la marca de la agencia.</li>
+    </ul>
+    <p class="stack"><b>Stack:</b> Next.js, NestJS, TypeScript, Supabase, Daily.co, PWA, Google Play</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Desarrollador Full-Stack y Marketing Digital · Freelance</h3>
+      <span class="when">2022 – Actualidad</span>
+    </div>
+    <div class="where">Clientes en Colombia y Uruguay, y productos propios</div>
+    <ul class="bullets">
+      <li>Diseñé, desarrollé y lancé <strong>SaaS con IA generativa</strong> con autenticación, base de datos y pagos: Marketing IA Generator (Gemini + Mercado Pago) e Interior IA Designer (Replicate + AWS S3 + PayPal).</li>
+      <li>Construí sitios con <strong>Strapi como CMS headless</strong> para <strong>Cruz del Sur</strong> (inmobiliaria en Uruguay, en producción) y una plataforma de blog para autores.</li>
+      <li><strong>Fraksma Sport:</strong> gestión de e-commerce en <strong>Shopify</strong>, landing pages promocionales de alta conversión y campañas de marketing digital.</li>
+      <li>Desplegué aplicaciones en <strong>VPS Linux con Docker, Nginx y SSL</strong> (Let’s Encrypt) y en Vercel, Netlify y Railway.</li>
+    </ul>
+    <p class="stack"><b>Stack:</b> Next.js, React, Node.js, Strapi, Shopify, Gemini, Docker, Nginx</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Community Manager y Atención al Cliente · Rapeluches</h3>
+      <span class="when">2019 – 2022</span>
+    </div>
+    <div class="where">Tienda de retail · Pereira, Colombia</div>
+    <ul class="bullets">
+      <li>Gestión de redes sociales, creación de contenido y atención al cliente por canales digitales.</li>
+      <li>Administración de catálogos digitales y estrategias de marketing orientadas a aumentar las ventas.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="page-break">
+  <h2>Proyectos destacados</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Marketing IA Generator <a href="https://pats-marketing-ia-generator.vercel.app/">demo ↗</a></h3>
+      <p>SaaS que genera contenido de marketing con Google Gemini. Auth con Clerk, PostgreSQL serverless (Neon) + Drizzle ORM y suscripciones con Mercado Pago.</p>
+    </div>
+    <div class="project">
+      <h3>Interior IA Designer <a href="https://interior-designer-ia.vercel.app/">demo ↗</a></h3>
+      <p>Rediseña espacios interiores a partir de una foto con modelos de imagen en Replicate. AWS S3 con URLs prefirmadas y sistema de créditos con PayPal.</p>
+    </div>
+    <div class="project">
+      <h3>Plexo Shop · API REST <a href="https://plexoshop.vercel.app/">demo ↗</a></h3>
+      <p>E-commerce en equipo (bootcamp). Construí la API con Express, Sequelize y MySQL: JWT, validación con Zod, pagos con Stripe, imágenes en S3 y correos con Brevo.</p>
+    </div>
+    <div class="project">
+      <h3>IA Recipe Finder <a href="https://ia-recipe-finder.vercel.app/">demo ↗</a></h3>
+      <p>Genera recetas a partir de ingredientes con Gemini; favoritos por usuario con Clerk y persistencia en PostgreSQL (Supabase) con Drizzle ORM.</p>
+    </div>
+  </div>
+  <p class="more">Más de 15 proyectos con demo en vivo y código fuente en
+    <a href="https://pats-portfolio-lite.vercel.app">pats-portfolio-lite.vercel.app</a> y
+    <a href="https://github.com/davidpatjus">github.com/davidpatjus</a></p>
+</section>
+
+<section>
+  <h2>Habilidades técnicas</h2>
+  <dl class="skills">
+    <dt>Lenguajes</dt>
+    <dd>TypeScript, JavaScript, Python, PHP, C++, SQL, HTML, CSS</dd>
+    <dt>Frontend</dt>
+    <dd>React, Next.js, Vue, Nuxt, Angular, Astro, Redux Toolkit, Tailwind CSS, Bootstrap, Vuetify, Framer Motion, PWA</dd>
+    <dt>Backend y APIs</dt>
+    <dd>Node.js, NestJS, Express, Django, APIs REST, GraphQL, JWT, Zod</dd>
+    <dt>Bases de datos</dt>
+    <dd>PostgreSQL, MySQL, MongoDB, Supabase, Firebase, Neon, Drizzle ORM, Sequelize</dd>
+    <dt>IA y automatización</dt>
+    <dd>Integración de LLMs (Google Gemini, Replicate), Vercel AI SDK (streaming, tool calling, salidas estructuradas), agentes de IA, Model Context Protocol (MCP), n8n</dd>
+    <dt>DevOps y Cloud</dt>
+    <dd>Docker, Docker Compose, Linux VPS, Nginx, SSL / Let’s Encrypt, CI/CD (GitHub Actions), AWS S3, Azure, Vercel, Netlify, Railway</dd>
+    <dt>Integraciones</dt>
+    <dd>Stripe, PayPal, Mercado Pago, Clerk, Daily.co, Shopify, Strapi (CMS headless)</dd>
+    <dt>Herramientas</dt>
+    <dd>Git, GitHub, Postman, Figma</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Formación</h2>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Ingeniería de Sistemas y Computación</h3>
+      <span class="when">En curso</span>
+    </div>
+    <div class="where">Universidad Tecnológica de Pereira (UTP)</div>
+    <p>Algoritmos, estructuras de datos, arquitectura de software, patrones de diseño, redes y servidores.</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Coding Bootcamp Full-Stack III y IV</h3>
+      <span class="when">Completado</span>
+    </div>
+    <div class="where">Universidad Tecnológica de Pereira (UTP)</div>
+    <p>Frontend, backend, bases de datos, UX/UI y SEO, trabajando en equipo sobre proyectos reales con mentoría.</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Bachiller</h3>
+    </div>
+    <div class="where">I.E. José Antonio Galán · Guacarí, Pereira</div>
+  </div>
+</section>
+
+<section>
+  <div class="two-col">
+    <div>
+      <h2>Competencias</h2>
+      <ul class="inline-list">
+        <li>Liderazgo positivo</li>
+        <li>Comunicación asertiva</li>
+        <li>Trabajo en equipo</li>
+        <li>Orientación a resultados</li>
+        <li>Resolución de problemas</li>
+        <li>Adaptabilidad</li>
+        <li>Pensamiento crítico</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Idiomas</h2>
+      <div class="lang">
+        <div>Español · Nativo<div class="bar"><span style="width:100%"></span></div></div>
+        <div>Inglés · B2 <span class="where">(en certificación)</span><div class="bar"><span style="width:75%"></span></div></div>
+      </div>
+      <h2 style="margin-top:12px">Intereses</h2>
+      <p>Música (hip hop y rap colombiano), videojuegos y creación de contenido.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Referencias</h2>
+  <p>Disponibles a solicitud.</p>
+</section>
+
+</main>
+
+</body>
+</html>

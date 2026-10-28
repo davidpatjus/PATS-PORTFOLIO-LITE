@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Logo from '/logo.png'
-import { Menu, X } from 'lucide-react'
+import { Download, Menu, X } from 'lucide-react'
 import { useLanguage } from '../i18n/context'
 
 const Header = () => {
@@ -26,6 +26,10 @@ const Header = () => {
                 {links.map((link) => (
                     <a key={link.href} href={link.href} className='transition-colors hover:text-black/60 text-black'>{link.label}</a>
                 ))}
+                <a href={t.cvFile} download className='inline-flex items-center gap-2 rounded-md bg-red-500 px-3 py-1 text-base font-semibold text-white transition-colors hover:bg-red-600'>
+                    <Download className='h-4 w-4' aria-hidden="true"/>
+                    {t.header.downloadCv}
+                </a>
             </nav>
         </div>
         <button
@@ -52,6 +56,10 @@ const Header = () => {
                 {links.map((link) => (
                     <a key={link.href} href={link.href} onClick={()=>setmMobileMenuOpen(false)} className='block border-black border rounded-md px-3 py-2 text-base font-medium hover:bg-gray-300 hover:text-gray-900'>{link.label}</a>
                 ))}
+                <a href={t.cvFile} download onClick={()=>setmMobileMenuOpen(false)} className='flex items-center gap-2 rounded-md bg-red-500 px-3 py-2 text-base font-semibold text-white hover:bg-red-600'>
+                    <Download className='h-4 w-4' aria-hidden="true"/>
+                    {t.header.downloadCv}
+                </a>
             </div>
         </div>
       )}
