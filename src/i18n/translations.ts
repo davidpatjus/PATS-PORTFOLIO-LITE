@@ -57,6 +57,7 @@ const es = {
     contact: 'Contacto',
     openMenu: 'Abrir menú principal',
     switchLanguage: 'Switch to English',
+    downloadCv: 'Descargar CV',
   },
   hero: {
     badge: 'Disponible para nuevas oportunidades',
@@ -67,6 +68,7 @@ const es = {
       'Construyo productos web completos: desde la interfaz hasta la API, la base de datos y el despliegue. Trabajo principalmente con TypeScript, Next.js, React y NestJS, integro modelos de lenguaje y automatizaciones en flujos reales de negocio, y llevo las aplicaciones a producción en VPS, nube y tiendas de aplicaciones.',
     ctaProjects: 'Ver proyectos',
     ctaContact: 'Contáctame',
+    ctaCv: 'Descargar CV',
     photoAlt: 'Foto de David Patiño',
     stats: [
       { value: '+3', label: 'años construyendo productos web' },
@@ -326,6 +328,7 @@ const es = {
     rights: 'Todos los derechos reservados.',
     builtWith: 'Hecho con React, TypeScript y Tailwind CSS.',
   },
+  cvFile: '/cv/David-Patino-CV-ES.pdf',
   whatsappGreeting: '👾 Hola David, ¿cómo estás? Vi tu portafolio y me gustaría hablar contigo. 👾',
 }
 
@@ -345,6 +348,7 @@ const en: Translations = {
     contact: 'Contact',
     openMenu: 'Open main menu',
     switchLanguage: 'Cambiar a español',
+    downloadCv: 'Download CV',
   },
   hero: {
     badge: 'Open to new opportunities',
@@ -355,6 +359,7 @@ const en: Translations = {
       'I build complete web products: from the interface to the API, the database and the deployment. I mainly work with TypeScript, Next.js, React and NestJS, I integrate language models and automations into real business workflows, and I ship applications to production on VPS, cloud and app stores.',
     ctaProjects: 'View projects',
     ctaContact: 'Contact me',
+    ctaCv: 'Download CV',
     photoAlt: 'Photo of David Patiño',
     stats: [
       { value: '3+', label: 'years building web products' },
@@ -614,6 +619,7 @@ const en: Translations = {
     rights: 'All rights reserved.',
     builtWith: 'Built with React, TypeScript and Tailwind CSS.',
   },
+  cvFile: '/cv/David-Patino-Resume-EN.pdf',
   whatsappGreeting: "👾 Hi David, how are you? I saw your portfolio and I'd like to talk with you. 👾",
 }
 

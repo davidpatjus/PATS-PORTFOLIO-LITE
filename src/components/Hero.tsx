@@ -1,5 +1,6 @@
 import Logo from '/PATS.webp'
 import { SiNextdotjs , SiTailwindcss, SiTypescript } from "react-icons/si";
+import { FaFileDownload } from "react-icons/fa";
 import { useLanguage } from '../i18n/context'
 import { SOCIAL_LINKS } from '../data/social'
 
@@ -21,6 +22,10 @@ const Hero = () => {
                <div className='flex flex-wrap gap-3 pt-2'>
                  <a href='#projects' className='bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md md:text-lg font-semibold'>{t.hero.ctaProjects}</a>
                  <a href='#contact' className='bg-black hover:bg-black/80 text-white px-4 py-2 rounded-md md:text-lg font-semibold'>{t.hero.ctaContact}</a>
+                 <a href={t.cvFile} download className='inline-flex items-center gap-2 border-2 border-black hover:bg-black hover:text-white px-4 py-2 rounded-md md:text-lg font-semibold transition-colors'>
+                   <FaFileDownload className='h-4 w-4' aria-hidden='true' />
+                   {t.hero.ctaCv}
+                 </a>
                </div>
                <dl className='grid grid-cols-3 gap-4 pt-4 max-w-lg'>
                  {t.hero.stats.map((stat) => (
